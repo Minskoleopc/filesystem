@@ -1,0 +1,23 @@
+[
+  {
+    "Name": "ProductA",
+    "PurchaseDate": "2020-12-02T18:29:50.000Z",
+    "Paid": true,
+    "Price": 300,
+    "Quantity": 3
+  },
+  {
+    "Name": "ProductB",
+    "PurchaseDate": "2020-12-03T18:29:50.000Z",
+    "Paid": true,
+    "Price": 300,
+    "Quantity": 2
+  },
+  {
+    "Name": "ProductC",
+    "PurchaseDate": "2020-12-04T18:29:50.000Z",
+    "Paid": true,
+    "Price": 300,
+    "Quantity": 4
+  }
+]

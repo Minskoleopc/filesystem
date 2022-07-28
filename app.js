@@ -1,76 +1,127 @@
-// // file handling ??
-// // testing ??
-// // file handling ??
-
 const fs = require('fs');
 const dirpath = "./file-repo/";
-const filepath = "./file-repo/ello.txt";
+const filepath = "./file-repo/me.txt";
 
-// // sync and async ---->  
-// // sync -- blocking 
-// // asyn --  non blocking
 
-// // program 1
-// // reading the file
-// // let c = fs.readFileSync(filepath, { encoding: "utf8" });
-// // console.log(c)
+// sync ---- blocking in nature
+// async ---- non - blocking in nature
 
-// //program2
-// // to check whether file exist 
-// // console.log(fs.existsSync(filepath))
+// readWrite , writeFile , rename , delete , fileexisit, append
 
-// // if (fs.existsSync(filepath)) {
-// //     let c = fs.readFileSync(filepath, { encoding: "utf8" });
-// //     console.log(c)
-// // }
-// // else {
-// //     console.log(`${filepath} not found`)
-// // }
+// progrom 1
+// let obj = fs.readFileSync(filepath,{encoding:"utf8"})
+// console.log(obj)
 
-// // program 3 (.npmrc)
-// if (fs.existsSync(dirpath)) {
-//     fs.writeFileSync(dirpath + "/hello2.text", "i am learning js")
+// program 2
+// console.log(fs.existsSync(filepath))
+
+// if(fs.existsSync(filepath)){
+//     console.log(obj)
 // }
 // else {
-//     console.log(`${dirpath} not found`)
+//     console.log(`${filepath} does not exist`)
 // }
-// if (fs.existsSync(dirpath)) {
-//     fs.writeFileSync(dirpath + "/hello2.text", "\n i am learning python", { flag: "a" })
+
+// program3
+
+// if(fs.existsSync(dirpath)){
+//     fs.writeFileSync(filepath,"hello i am learning python")
 // }
 // else {
-//     console.log(`${dirpath} not found`)
+//     console.log(`${dirpath} does not exist`)
 // }
 
-// // program 4 (to append the filesystem)
-// if (fs.existsSync(dirpath)) {
-//     fs.appendFileSync(dirpath + "/hello2.text", "\n i am learning python")
+// if(fs.existsSync(dirpath)){
+//     fs.writeFileSync(filepath,"\n hello i am learning js2",{flag:'a'})
 // }
 // else {
-//     console.log(`${dirpath} not found`)
+//     console.log(`${dirpath} does not exist`)
 // }
-// // read , write , append operation , fileexist
 
-// // program 5(read operation)
-// if (fs.existsSync(dirpath)) {
-//     fs.renameSync(dirpath + "/hello2.text", dirpath + "/imp.text")
+// if(fs.existsSync(dirpath)){
+//     fs.appendFileSync(filepath,"\n hello i am learning cloud")
 // }
 // else {
-//     console.log(`${dirpath} not found`)
+//     console.log(`${dirpath} does not exist`)
 // }
 
-// file delete operation
-// if (fs.existsSync(dirpath)) {
-//     fs.unlinkSync(dirpath+"/hello.txt")
+
+// if(fs.existsSync(dirpath)){
+//     fs.renameSync(filepath,"./file-repo/me.txt")
 // }
 // else {
-//     console.log(`${dirpath} not found`)
+//     console.log(`${dirpath} does not exist`)
 // }
 
+// if(fs.existsSync(dirpath)){
+//     fs.unlinkSync(filepath)
+// }
+// else {
+//     console.log(`${dirpath} does not exist`)
+// }
 
-// async operation
-// excel 
-// cy.task()
-// sql server , postgres
+// async 
+
+// program for reading the file
+
+fs.readFile(filepath,"utf-8",function(err,data){
+    if(err){
+        console.log(err)
+    }
+    else {
+        console.log(data)
+    }
+})
+
+
+// program -2 writing the asyn file
+
+fs.writeFile(filepath,"new to python",function(err){
+    if(err){
+        console.log(err)
+    }
+    else {
+        console.log('Data is saved')
+    }
+})
+
+// program 3 to append to existing file 
+fs.appendFile(filepath,"new to js",function(err){
+    if(err){
+        console.log(err)
+    }
+    else {
+        console.log('data append successful')
+    }
+})
+
+// program - delete file
+fs.unlink(filepath,function(err){
+    if(err){
+        console.log(err)
+    }
+    else {
+        console.log('file deleted succesully')
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
