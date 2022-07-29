@@ -1,6 +1,20 @@
 const fs = require('fs');
 const dirpath = "./file-repo/";
 const filepath = "./file-repo/me.txt";
+const filepath2 = "./file-repo/hello.txt";
+
+// file manage???
+// cy.readFile()
+//cy.write()
+
+// browser
+// db access -- excel file system
+
+// server -- files , db connect
+// function()
+// task ---->>>  output 
+// testcase run 
+// cy.task() ===> server --- data ---- browser access
 
 
 // sync ---- blocking in nature
@@ -8,12 +22,12 @@ const filepath = "./file-repo/me.txt";
 
 // readWrite , writeFile , rename , delete , fileexisit, append
 
-// progrom 1
+// program 1
 // let obj = fs.readFileSync(filepath,{encoding:"utf8"})
 // console.log(obj)
 
-// program 2
-// console.log(fs.existsSync(filepath))
+//program 2
+//console.log(fs.existsSync(filepath))
 
 // if(fs.existsSync(filepath)){
 //     console.log(obj)
@@ -25,7 +39,7 @@ const filepath = "./file-repo/me.txt";
 // program3
 
 // if(fs.existsSync(dirpath)){
-//     fs.writeFileSync(filepath,"hello i am learning python")
+//     fs.writeFileSync(filepath,"hello i am learning javascript")
 // }
 // else {
 //     console.log(`${dirpath} does not exist`)
@@ -47,55 +61,55 @@ const filepath = "./file-repo/me.txt";
 
 
 // if(fs.existsSync(dirpath)){
-//     fs.renameSync(filepath,"./file-repo/me.txt")
+//     fs.renameSync(filepath,filepath2)
 // }
 // else {
 //     console.log(`${dirpath} does not exist`)
 // }
 
 // if(fs.existsSync(dirpath)){
-//     fs.unlinkSync(filepath)
+//     fs.unlinkSync(filepath2)
 // }
 // else {
 //     console.log(`${dirpath} does not exist`)
 // }
 
-// async 
+// // async 
 
-// program for reading the file
+// // program for reading the file
 
-fs.readFile(filepath,"utf-8",function(err,data){
-    if(err){
-        console.log(err)
-    }
-    else {
-        console.log(data)
-    }
-})
+// fs.readFile(filepath,"utf-8",function(err,data){
+//     if(err){
+//         console.log(err)
+//     }
+//     else {
+//         console.log(data)
+//     }
+// })
 
 
-// program -2 writing the asyn file
+// // program -2 writing the asyn file
 
-fs.writeFile(filepath,"new to python",function(err){
-    if(err){
-        console.log(err)
-    }
-    else {
-        console.log('Data is saved')
-    }
-})
+// fs.writeFile(filepath,"new to python",function(err){
+//     if(err){
+//         console.log(err)
+//     }
+//     else {
+//         console.log('Data is saved')
+//     }
+// })
 
-// program 3 to append to existing file 
-fs.appendFile(filepath,"new to js",function(err){
-    if(err){
-        console.log(err)
-    }
-    else {
-        console.log('data append successful')
-    }
-})
+// // program 3 to append to existing file 
+// fs.appendFile(filepath,"new to js",function(err){
+//     if(err){
+//         console.log(err)
+//     }
+//     else {
+//         console.log('data append successfully')
+//     }
+// })
 
-// program - delete file
+// // program - delete file
 fs.unlink(filepath,function(err){
     if(err){
         console.log(err)
